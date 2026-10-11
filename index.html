@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Notes to Mind-Map AI - Pro</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
+</head>
+<body>
+
+<div class="header">
+  <h1>Mind Map Studio - Pro</h1>
+  <p>Create | Connect | Edit | Save</p>
+</div>
+
+<div class="toolbar">
+  <button onclick="addNode()"> Create Node</button>
+  <button onclick="setMode('connect')" id="btnConnect"> Connect Mode</button>
+  <button onclick="editNode()"> Edit Node</button>
+  <button onclick="deleteNode()" class="danger"> Delete</button>
+  <button onclick="saveMap()"> Save</button>
+  <button onclick="loadMap()"> Load</button>
+  <button onclick="clearMap()"> Clear</button>
+  <input type="file" id="upload" accept="image/*" hidden>
+  <button onclick="document.getElementById('upload').click()"> Scan Notes</button>
+</div>
+
+<p id="status">Tip: Click on empty space to create node. Drag to move. Double-click to edit.</p>
+
+<div id="mindmap-container">
+  <svg id="lines"></svg>
+  <div id="nodes-layer"></div>
+</div>
+
+<div class="info">
+  <h3>Features Implemented:</h3>
+  <ul>
+    <li><b>Create Nodes:</b> Click empty space or use button</li>
+    <li><b>Connect Ideas:</b> Connect Mode -> Click 2 nodes</li>
+    <li><b>Edit & Delete:</b> Double-click to edit, Delete button</li>
+    <li><b>Interactive UI:</b> Drag & Drop, Modern Design</li>
+    <li><b>Save Mind Map:</b> Auto saves + Download JSON</li>
+  </ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
